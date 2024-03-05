@@ -6,13 +6,9 @@ import java.util.Objects;
 public class PokerHand implements Comparable<PokerHand> {
 
     private String hand;
-    private List<PokerHand> hands;
-
 
     public PokerHand(String hand) {
         this.hand = hand;
-        this.hands = new ArrayList<>();
-        this.hands.add(this);
     }
 
     public EResult compareWith(PokerHand hand) {
@@ -38,21 +34,6 @@ public class PokerHand implements Comparable<PokerHand> {
 
     public String getHand() {
         return hand;
-    }
-
-    public List<PokerHand> getHands() {
-        return hands;
-    }
-
-    public void setHands(PokerHand hand) {
-        if(this.hands.size() < 2 && Objects.equals(hand.getHand(), "")) {
-            this.hands.add(new PokerHand("JS JH KS 7S QH"));
-            this.hands.add(new PokerHand("2C 3C AC 4C 5C"));
-            this.hands.add(new PokerHand("KS 2H 5C JD TD"));
-            this.hands.add(new PokerHand("JS JH KS 7S QH"));
-            this.hands.add(new PokerHand("JS JH 2S 7S 3H"));
-        }
-        this.hands.add(hand);
     }
 
     @Override
