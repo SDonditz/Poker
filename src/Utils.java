@@ -38,9 +38,9 @@ public class Utils {
 
     public static void initializationResultValue() {
         Utils.resultValue = new HashMap<>();
-        Utils.resultValue.put(EResult.LOSS, -1);
+        Utils.resultValue.put(EResult.LOSS, 1);
         Utils.resultValue.put(EResult.TIE, 0);
-        Utils.resultValue.put(EResult.WIN, 1);
+        Utils.resultValue.put(EResult.WIN, -1);
     }
 
     public static String[] turnHandToCards(PokerHand pokerHand) {
