@@ -29,7 +29,6 @@ public class CardsHands {
 
             //Instancition d'une String ligne et lecture du fichier tant qu'elle est différente de null
             while((line = bufferedReader.readLine()) != null) {
-                List<String> buffTab = new ArrayList<>();
                 this.hands.add(new PokerHand(line));
             }
             //Fermeture du BufferReader
